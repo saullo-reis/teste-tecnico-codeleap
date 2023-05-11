@@ -16,4 +16,4 @@
 - axios;
 
 ## Test Técnico
-made by saullo for codeleap.
+Made by Saullo Reis for CodeLeap.
