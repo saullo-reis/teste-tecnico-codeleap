@@ -1,0 +1,51 @@
+.login
+    background-color: #DDDDDD
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    &-container
+        animation: slide ease 2s forwards
+        background-color: #fff
+        padding: 20px 20px 50px 20px
+        margin: 20px
+        width: 70%
+        opacity: 0
+        max-width: 500px
+        border-radius: 16px
+        border: 1px solid #CCCCCC
+        &-title
+            margin-bottom: 15px
+        &-form
+            display: flex
+            flex-direction: column
+            position: relative
+            &-name
+                margin: 8px 0 16px
+                border: 1px solid #777777 
+                border-radius: 8px
+                padding: 5px
+            &-button
+                position: absolute
+                right: 0
+                bottom: -23px
+                background-color: #7695EC
+                color: white
+                font-weight: 700
+                width: 30%
+                cursor: pointer
+                border: none
+                padding: 5px
+                border-radius: 8px
+
+@keyframes slide
+    0%
+        opacity: 0
+        transform: translateX(200px)
+    25%
+        transform: translateX(-10px)
+    75%
+        transform: translateX(4)
+    100%
+        opacity: 1
+        transform: translateX(0)

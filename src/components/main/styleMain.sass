@@ -1,0 +1,163 @@
+.main
+    background-color: #DDDDDD
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-container
+        background-color: #fff
+        width: 60%
+        min-height: 100vh
+        &-title
+            color: #fff
+            background-color: #7695EC
+            padding: 20px
+        &-form
+            border: solid 1px #999999
+            border-radius: 16px
+            display: flex
+            flex-direction: column
+            margin: 20px
+            padding: 30px
+            height: 280px
+            position: relative
+            &-label
+                margin-top: 20px
+            &-input
+                border: solid 1px #777777
+                border-radius: 8px
+                padding: 5px
+            &-textarea
+                resize: none
+                border: solid 1px #777777
+                border-radius: 8px
+                height: 100px
+                padding: 5px
+            &-button
+                position: absolute
+                bottom: 13px
+                cursor: pointer
+                right: 30px
+                border: none
+                color: #fff
+                background-color: #7695EC
+                padding: 5px 35px
+                border-radius: 8px
+        &-posts
+            display: flex
+            flex-direction: column
+            padding: 20px
+            &-post
+                animation: slideUp 2s ease forwards
+                border: solid 1px #999999
+                border-radius: 16px
+                margin: 0 0 50px
+                position: relative
+                opacity: 0
+                &-container
+                    background-color: #7695EC
+                    border-top-left-radius: 16px
+                    border-top-right-radius: 16px
+                    display: flex
+                    color: white
+                    align-items: center
+                    justify-content: space-between
+                    padding: 20px
+                    svg
+                        font-size: 20px
+                        margin-left: 10px
+                        cursor: pointer
+                &-name
+                    color: #777777
+                    font-size: 16px
+                    padding: 20px
+                &-time
+                    color: #777777
+                    font-size: 16px
+                    padding: 20px
+                &-content
+                    padding: 20px
+
+.title-modal
+    font-size: 20px                    
+.buttons
+    margin: 20px
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    &-cancel
+        border: 1px solid #000000
+        border-radius: 8px
+        font-weight: 700
+        padding: 4px 20px
+        cursor: pointer
+    &-delete
+        background-color:#FF5151
+        color: white
+        margin-left: 10px
+        font-weight: 700
+        border: none
+        border-radius: 8px
+        cursor: pointer
+        padding: 5px 20px
+
+.modal-edit-form
+    display: flex
+    flex-direction: column
+    &-label
+        margin: 20px 0 10px
+    &-title
+        background-color: #FFFFFF
+        border: 1px solid #777777
+        border-radius: 8px
+        padding: 5px
+    &-textarea
+        resize: none
+        height: 100px
+        background-color: #FFFFFF
+        border: 1px solid #777777
+        border-radius: 8px
+        padding: 5px
+
+.modal-edit-buttons
+    display: flex
+    justify-content: flex-end
+    margin: 10px
+    &-cancel
+        background-color:#FFFFFF
+        border: 1px solid #999999
+        padding: 3px 20px
+        border-radius: 8px
+        margin-right: 20px
+        cursor: pointer
+    &-save
+        background-color: #47B960
+        border-radius: 8px
+        padding: 3px 25px
+        cursor: pointer
+        color: #fff
+        border: none
+
+.data-name
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+
+@media (max-width: 500px)
+    .main-container
+        width: 100%
+    .main-container-form-title
+        font-size: 20px
+
+@keyframes slideUp
+    0%
+        opacity: 0
+        transform: translateY(80px)
+    25%
+        transform: translateY(-10px)
+    75%
+        transform: translateY(4px)
+    100%
+        opacity: 1
+        transform: translateY(0)
+
