@@ -1,3 +1,6 @@
+import { ReactNode } from "react"
+
+
 interface PostsType {
     content: string,
     created_datetime: string,
@@ -12,4 +15,10 @@ interface DataType {
     content?: string,
 }
 
-export type { DataType, PostsType}
+interface ModalProps {
+    isOpen: boolean,
+    onClose: () => void,
+    children: ReactNode
+}
+
+export type { DataType, PostsType, ModalProps}

@@ -80,10 +80,10 @@ export const Main = () => {
 
     }
 
-    const postSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const postSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         try {
-            const response = axios.post(url, {
+            await axios.post(url, {
                 username: data.name,
                 title: data.title,
                 content: data.content
@@ -191,10 +191,10 @@ export const Main = () => {
                             <div className='main-container-posts-post-container'>
                                 <h1 className='main-container-posts-post-container-title'>{element.title}</h1>
                                 <div className='main-container-posts-post-container-icons'>
-                                    {element.username === name && 
-                                        <> 
+                                    {element.username === name &&
+                                        <>
                                             <BsFillTrashFill onClick={() => handleModalOpen(element.id, 'trash')} />
-                                            <BiEdit onClick={() => handleModalOpen(element.id, 'edit')} /> 
+                                            <BiEdit onClick={() => handleModalOpen(element.id, 'edit')} />
                                         </>
                                     }
                                 </div>

@@ -1,12 +1,5 @@
-import React, {ReactNode} from 'react'
 import './modalDelete.sass'
-
-
-interface ModalProps {
-    isOpen: boolean,
-    onClose: () => void,
-    children: ReactNode
-}
+import { ModalProps } from '../../../../utils/utils';
 
 export const ModalDelete = ({ isOpen, children }: ModalProps) => {
     if (!isOpen) {

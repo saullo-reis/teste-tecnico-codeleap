@@ -1,12 +1,5 @@
-import { ReactNode } from 'react'
+import { ModalProps } from '../../../../utils/utils';
 import './modalEdit.sass'
-
-
-interface ModalProps {
-    isOpen: boolean,
-    onClose: () => void,
-    children: ReactNode
-}
 
 export const ModalEdit = ({ isOpen, children }: ModalProps) => {
     if (!isOpen) {
